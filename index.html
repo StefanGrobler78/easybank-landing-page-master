@@ -5,7 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Easybank landing page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,30 +20,45 @@
   </style>
 </head>
 <body>
+  <header class="prim-nav">
+    <nav class="prim-nav__nav">
+      <div class="prim-nav__logo">
+        <img src="./images/logo.svg" alt="easybank logo">
+      </div>
+      <div class="prim-nav__overlay">
+        <ul class="prim-nav__navlist">
+          <li><a class="prim-nav__link" href="#">Home</a></li>
+          <li><a class="prim-nav__link" href="#">About</a></li>
+          <li><a class="prim-nav__link" href="#">Contact</a></li>
+          <li><a class="prim-nav__link" href="#">Blog</a></li>
+          <li><a class="prim-nav__link" href="#">Careers</a></li>
+        </ul>
+        </div>
+      <div class="prim-nav__mob-icon_container">
+        <img class="prim-nav__mob-icon" src="./images/icon-hamburger.svg" alt="mobile icon">
+        <img class="prim-nav__mob-icon open" src="./images/icon-close.svg" alt="mobile icon">
+      </div>
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="hero__container">
+      <div class="hero__image">
+        <img src="./images/image-mockups.png" alt="into">
+      </div>
+      <div class="hero__text">
+        <h1 class="hero__title">Next generation digital banking</h1>
+        <p>Take your financial life online. Your Easybank account will be a one-stop-shop 
+  for spending, saving, budgeting, investing, and much more.</p>
+  <a class="button" href="http://">Request Invite</a>
+      </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 
+  
 
-  Home
-  About
-  Contact
-  Blog
-  Careers
-
-  Request Invite
-
-
-
-  Next generation digital banking
-
-  Take your financial life online. Your Easybank account will be a one-stop-shop 
-  for spending, saving, budgeting, investing, and much more.
-
-  Request Invite
-
-
-
-  Why choose Easybank?
-
-  We leverage Open Banking to turn your bank account into your financial hub. Control 
-  your finances like never before.
+  
 
   Online Banking
   Our modern web and mobile applications allow you to keep track of your finances 
@@ -91,11 +111,12 @@
 
   Request Invite
 
-  © Easybank. All Rights Reserved
+  © Easybank. All Rights Reserved -->
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script src="./js/scripts.js"></script>
 </body>
 </html>

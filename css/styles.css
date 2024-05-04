@@ -1,0 +1,207 @@
+/* Reset */
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+button {
+    font: inherit;
+}
+:root{
+/* ## Colors */
+/* ### Primary */
+
+--dark-blue: hsl(233, 26%, 24%);
+--dark: hsl(233, 26%, 24%);
+--lime-green: hsl(136, 65%, 51%);
+--bright-cyan: hsl(192, 70%, 51%);
+
+/* ### Neutral */
+
+--grayish-blue: hsl(233, 8%, 62%);
+--light-grayish-blue: hsl(220, 16%, 96%);
+--very-light-gray: hsl(0, 0%, 98%);
+--white: hsl(0, 0%, 100%);
+
+/* ## Typography */
+--font-size: 18px;
+
+--fs-400: 1.125rem;
+
+--fw-300: 300;
+--fw-400: 400;
+--fw-700: 700;
+
+/* ### Font */
+--ff-prim: "Public Sans", sans-serif;
+}
+
+/* Utility Classes */
+/* Background color */
+.bgc--drk-bl {
+    background-color: var(--dark-blue);
+}
+.bgc--lime {
+    background-color: var(--lime-green);
+}
+.bgc--brt-cayan {
+    background-color: var(--bright-cyan);
+}
+.bgc--gy-bl {
+    background-color: var(--grayish-blue);
+}
+.bgc--lt-gy-bl {
+    background-color: var(--light-grayish-blue);
+}
+.bgc--wht {
+    background-color: var(--white);
+}
+
+/* font color */
+.fc--drk-bl {
+    color: var(--dark-blue);
+}
+.fc--lime {
+    color: var(--lime-green);
+}
+.fc--brt-cayan {
+    color: var(--bright-cyan);
+}
+.fc--v-lt-gy {
+    color: var(--very-light-gray);
+}
+.fc--gy-bl {
+    color: var(--grayish-blue);
+}
+.fc--wht {
+    background-color: var(--white);
+}
+
+/* General Styles */
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: var(--ff-prim);
+    font-size: var(--fs-400);
+    color: var(--grayish-blue);
+    overflow: hidden;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+img {
+    width: 100%;
+    display: block;
+}
+/* Components */
+/* Navigation Mobile */
+.prim-nav {
+    padding-inline: 1rem;
+    position: relative;
+}
+.prim-nav__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+}
+.prim-nav__overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding-bottom: 2rem;
+    position: absolute;
+    top: 4rem;
+    left: 0rem;
+    right: 0rem;
+    bottom: 0rem;
+    background: linear-gradient(0.5turn, var(--dark-blue), transparent);
+    visibility: hidden;
+    translate: 100% 0;
+    opacity: 0;
+    transition: .7s ease;
+    min-height: calc(100vh - 4rem);
+}
+.prim-nav__navlist{
+    list-style: none;
+    width: calc(100% - 2rem);
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0;
+    padding-block: 2rem;
+    margin-top: 1rem;
+    border-radius: 0.345rem;
+}
+.prim-nav__menu-toggle{
+    visibility: visible;
+    translate: unset;
+    opacity: 1;
+}
+.open {
+    display: none;
+}
+
+.button{
+   padding: 0.75rem 1.5rem;
+   background: linear-gradient(0.25turn, var(--lime-green), var(--bright-cyan)); 
+   color: var(--white);
+   border-radius: 25px;
+}
+/* Hero */ 
+
+.hero {
+    background-color: transparent;
+}
+.hero__image{
+    background-image: url('../images/bg-intro-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: calc(50vh - 2rem);
+}
+.hero__image > img{
+    margin-top: -5rem;
+    aspect-ratio: 1/1;
+    padding-inline: 1rem;
+}
+.hero__text{
+    height: calc(50vh - 2rem);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding-inline: 1rem;
+}
+.hero__title {
+    font-size: 2.5rem;
+    color: var(--dark-blue);
+    font-weight: var(--fw-300);
+    text-align: center;
+}
+@media (min-width: 576px) {
+    /* Navigation Device */
+    .prim-nav__mob-icon_container {
+        display: none;
+    }
+    .prim-nav__navlist{
+        all: unset;
+        list-style: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+    }
+}
