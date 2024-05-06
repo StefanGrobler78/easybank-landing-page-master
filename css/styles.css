@@ -25,9 +25,13 @@ button {
 
 /* ## Typography */
 --font-size: 18px;
+--fs-100: 0.75rem;
+--fs-200: 0.875rem;
+--fs-300: 1rem;
+--fs-400: 1.125rem; /* 18px  */
+--fs-500: 1.375rem;
 
---fs-400: 1.125rem;
-
+/* font Weight */
 --fw-300: 300;
 --fw-400: 400;
 --fw-700: 700;
@@ -79,15 +83,15 @@ button {
 
 /* General Styles */
 body {
-    min-height: 100vh;
     margin: 0;
     font-family: var(--ff-prim);
     font-size: var(--fs-400);
+    background-color: var(--very-light-gray);
     color: var(--grayish-blue);
-    overflow: hidden;
+    letter-spacing: 0.04rem;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, h4, p {
     margin: 0;
 }
 
@@ -117,7 +121,7 @@ img {
     align-items: center;
     list-style: none;
     padding-bottom: 2rem;
-    position: absolute;
+    position: fixed;
     top: 4rem;
     left: 0rem;
     right: 0rem;
@@ -157,6 +161,7 @@ img {
    background: linear-gradient(0.25turn, var(--lime-green), var(--bright-cyan)); 
    color: var(--white);
    border-radius: 25px;
+   max-width: fit-content;
 }
 /* Hero */ 
 
@@ -168,7 +173,7 @@ img {
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-    height: calc(50vh - 2rem);
+    min-height: calc(50vh - 2rem);
 }
 .hero__image > img{
     margin-top: -5rem;
@@ -176,7 +181,7 @@ img {
     padding-inline: 1rem;
 }
 .hero__text{
-    height: calc(50vh - 2rem);
+    min-height: calc(50vh - 2rem);
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -190,6 +195,136 @@ img {
     color: var(--dark-blue);
     font-weight: var(--fw-300);
     text-align: center;
+}
+.hero__subtitle{
+    line-height: 1.5;
+}
+/* Services */
+
+.services{
+    background-color: var(--light-grayish-blue);
+    padding: 4rem 1rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.services__title{
+    color: var(--dark-blue);
+    font-size: 2rem;
+    font-weight: var(--fw-300);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.services__subtitle{
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+.services__card{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.services__card > h3{
+    color: var(--dark);
+    font-weight: var(--fw-400);
+}
+.services__card > img{
+    width: 100px;
+    margin: 2rem 2rem 1rem;
+
+}
+.services__card > p{
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+/* Articles */
+.articles{
+    background-color: var(--very-light-gray);
+    margin-bottom: 4rem;
+}
+.articles__header-title {
+    color: var(--dark-blue);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: var(--fw-400);
+    margin-bottom: 2rem;
+} 
+.articles__container{
+    margin-inline: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+}
+.articles__card{
+    background-color: var(--white);
+    border: 1px solid black;
+    border-radius: .345rem;
+}
+.articles__card-body{
+    padding: 2rem;
+}
+.articles__card-body-author{
+    font-size: var(--fs-100);
+    margin-bottom: 1rem;
+}
+.articles__card-body-title{
+    font-size: var(--fs-400);
+    font-weight: var(--fw-400);
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+}
+.articles__card-body-description{
+    font-size: var(--fs-300);
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark);
+    padding-block: 3rem;
+}
+.footer__container {
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+.footer__social-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.footer__social-icon{
+    width: 25px
+}
+.footer__navlist{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    list-style: none;
+    text-align: center;
+}
+.footer__navlink{
+    color: var(--white);
+}
+.footer__cta-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.footer__attribution{
+    max-width: 40ch;
+    text-align: center;
+}
+.footer__attribution-link {
+    color: var(--bright-cyan);
 }
 @media (min-width: 576px) {
     /* Navigation Device */
